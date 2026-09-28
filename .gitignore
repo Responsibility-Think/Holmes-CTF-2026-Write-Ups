@@ -1,0 +1,14 @@
+.obsidian/
+.trash/
+evidence-only/
+HammerDROP/
+script_and_quill/
+*.exe
+*.dmp
+*.pcap
+*.zip
+*.pt
+*.pdf
+*.pptx
+sslkeys.log
+*.hash
