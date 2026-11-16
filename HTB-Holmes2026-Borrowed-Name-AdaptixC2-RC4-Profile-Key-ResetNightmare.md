@@ -472,7 +472,7 @@ The RDP session at 19:42:58 predates the beacon by fifty minutes and uses the sa
 Reproduction, from the supplied ZIP to all twelve answers.
 
 ```bash
-cd ~/bn && unzip BorrowedName.zip -d outer
+cd bn && unzip BorrowedName.zip -d outer
 unzip -P 'PaedeiRae1xiexahwuno' outer/danger.zip -d ev
 pip install --break-system-packages scapy python-evtx pyfatfs
 

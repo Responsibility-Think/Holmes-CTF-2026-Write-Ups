@@ -250,7 +250,7 @@ x7()    0xebfc1ed96b1c6b940fb6b06359ff4a6776df7a9a
 Reproduction, from the supplied ZIP to the last flag:
 
 ```bash
-cd /home/kali/holmes_ctf
+cd holmes_ctf
 unzip SilentDividend.zip
 unzip -P '<password from DANGER.txt>' danger.zip
 7z x 'TrustSettle 1.0.0.exe' -oinstaller '$PLUGINSDIR/app-64.7z'

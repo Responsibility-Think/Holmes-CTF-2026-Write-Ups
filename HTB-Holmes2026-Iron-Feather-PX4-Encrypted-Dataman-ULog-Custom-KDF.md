@@ -383,7 +383,7 @@ Descent from 67 m to ground took **5.1 seconds**. The low-battery failsafe at 51
 Reproduction, from the supplied ZIP to all seventeen answers.
 
 ```bash
-cd ~/iron && unzip IronFeather.zip
+cd iron && unzip IronFeather.zip
 pip install --break-system-packages capstone pyelftools pycryptodome pyulog
 
 # --- locate the KDF (no symbols; scan .text for rel32 calls to OpenSSL) ---

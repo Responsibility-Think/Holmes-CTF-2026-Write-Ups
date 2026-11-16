@@ -309,7 +309,7 @@ Fifteen minutes and sixteen seconds from insertion to removal. Execution 35 seco
 Reproduction, from the supplied ZIP to all nine answers. Container had `python3` with `LnkParse3`, `python-registry`, `dissect.esedb`, `olefile`.
 
 ```bash
-cd /home/claude && mkdir -p pg
+mkdir -p pg
 unzip -q PaperGhost.zip -d pg
 pdftotext -layout "pg/Holmes CTF 2026 - Sherlock 04 - The False Employee.pdf" -
 

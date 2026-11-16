@@ -229,7 +229,7 @@ The hard problem of the room. "Without dumping LSASS" reads as a constraint but 
 **What works** — write the missing Volatility 3 plugin. pypykatz ships the reader (`pypykatz/commons/readers/volatility3/volreader.py`) but not the plugin wrapper; the author's comment says it lives in "a separate project" that is not packaged.
 
 ```python
-# ~/tools/volplugins/pypykatz_vol3.py
+# volplugins/pypykatz_vol3.py
 from volatility3.framework import interfaces
 from volatility3.framework.interfaces import plugins as vplugins
 from volatility3.framework.configuration import requirements
@@ -263,7 +263,7 @@ class Pypykatz(vplugins.PluginInterface):
 ```
 
 ```
-vol -p ~/tools/volplugins -f memory.elf pypykatz_vol3.Pypykatz --kerberos-dir ./kerb
+vol -p ./volplugins -f memory.elf pypykatz_vol3.Pypykatz --kerberos-dir ./kerb
 # → 29 .kirbi files, named by realm/client/service
 ```
 
@@ -271,7 +271,7 @@ vol -p ~/tools/volplugins -f memory.elf pypykatz_vol3.Pypykatz --kerberos-dir ./
 
 1. `interfaces.plugins.PluginInterface` as the base class registers the *module* but not the *class*. Use `from volatility3.framework.interfaces import plugins as vplugins` and subclass `vplugins.PluginInterface`.
 2. `PluginRequirement(version=(2,0,0))` fails against pslist 3.0.1. Use `VersionRequirement(component=..., version=pslist.PsList._version)`.
-3. **Two Volatility installs.** `vol` was pipx's venv; pypykatz was in the system site-packages. Discovery and import resolved different framework instances, so the subclass check silently failed. Fix: `~/.local/share/pipx/venvs/volatility3/bin/python -m pip install pypykatz`.
+3. **Two Volatility installs.** `vol` was pipx's venv; pypykatz was in the system site-packages. Discovery and import resolved different framework instances, so the subclass check silently failed. Fix: `<volatility3-venv>/bin/python -m pip install pypykatz`.
 4. Volatility swallows plugin import errors. `PYTHONPATH=<dir> python3 -c "import <plugin>"` under *the interpreter `vol` uses* is the only way to see them.
 
 Then:
