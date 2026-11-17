@@ -35,7 +35,6 @@ tags:
   - Memory_Forensics
   - Kerberos
 related:
-  - "[[HTB]]"
   - "[[00_MOC-HTB-Holmes2026-Reichenbach-Directive-Event]]"
   - "[[HTB-Holmes2026-Borrowed-Name-AdaptixC2-RC4-Profile-Key-ResetNightmare]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
@@ -567,11 +566,9 @@ Ordered by expected value.
 - [[HTB-Holmes2026-Paper-Ghost-Planted-USB-Spyware-Search-Index-Recovery]] — Sherlock 04
 - [[HTB-Holmes2026-Iron-Feather-PX4-Encrypted-Dataman-ULog-Custom-KDF]] — Sherlock 07
 - [[HTB-Holmes2026-Poisoned-Branch-Backdoored-Git-Repo-XOR-Mettle-ZipCrypto]] — Sherlock 05; `afenwick` and `jreed` appear there on the DIOGENES roster with their real directorates, which is the identity context this room's UPN swap exploits
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 
 ## Change Log
 
-- 2026-09-20 — Note created. Seven of ten flags solved and recorded; scenario captured verbatim. **All 25 wrong submissions logged in §14** with the exact string, the flag, and the reasoning at the time — 3 intermediate findings, 4 hash candidates, 11 address×md5 combinations, 7 LogonId pairs and representations. §14.5 identifies three distinct failure shapes and proposes two additions to the MOC taxonomy: **ambiguous referent** (the finding is correct and the question's noun has several defensible readings) and **exhaustive enumeration of a wrong hypothesis** (after two rejections from one evidence cluster, change cluster rather than permute). `status: draft` — resumable per §16. `created` stamped from a real fetched UTC clock (container clock, not the vault host's). `updated` omitted per `02_frontmatter-standard` §1 (plugin-owned, not hand-stamped). `solves` and `category` unverified (§17.1–2). **Root DC address conflicts with the Borrowed Name note (§17.3)** — `.11` here from three 4624s, `.10` there; one of the two needs correcting, and this note should not be treated as authoritative on that point until it is reconciled.
+- 2026-09-20 — Note created. Seven of ten flags solved and recorded; scenario captured verbatim. **All 25 wrong submissions logged in §14** with the exact string, the flag, and the reasoning at the time — 3 intermediate findings, 4 hash candidates, 11 address×md5 combinations, 7 LogonId pairs and representations. §14.5 identifies three distinct failure shapes and proposes two additions to the MOC taxonomy: **ambiguous referent** (the finding is correct and the question's noun has several defensible readings) and **exhaustive enumeration of a wrong hypothesis** (after two rejections from one evidence cluster, change cluster rather than permute). `status: draft` — resumable per §16. `created` stamped from a real fetched UTC clock (container clock, not the vault host's). `solves` and `category` unverified (§17.1–2). **Root DC address conflicts with the Borrowed Name note (§17.3)** — `.11` here from three 4624s, `.10` there; one of the two needs correcting, and this note should not be treated as authoritative on that point until it is reconciled.

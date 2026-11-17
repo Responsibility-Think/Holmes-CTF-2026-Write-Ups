@@ -28,7 +28,6 @@ tags:
   - Network_Forensics
   - OSINT
 related:
-  - "[[HTB]]"
   - "[[00_MOC-HTB-Holmes2026-Reichenbach-Directive-Event]]"
   - "[[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
@@ -423,11 +422,9 @@ Useful discriminator: `U2FsdGVkX1` is base64 `Salted__`. If `-md md5` with no `-
 - [[HTB-Holmes2026-Iron-Feather-PX4-Encrypted-Dataman-ULog-Custom-KDF]] — Sherlock 07
 - [[HTB-Holmes2026-Borrowed-Name-AdaptixC2-RC4-Profile-Key-ResetNightmare]] — Sherlock 08
 - [[HTB-Holmes2026-Last-Light-Golden-Tickets-RBCD-Unflushed-EVTX-Carve]] — Sherlock 09; supplies the MOC §4 class 7 rule (stop permuting a rejected cluster) that §12 of this note fires on
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 
 ## Change Log
 
-- 2026-09-21 — Note created after Whisper Chain (Sherlock 03, medium, 975, **7/8**). §12 records all twenty flag-8 submissions and four reasoning failures verbatim, per the event's format-not-content taxonomy. Closes MOC open thread #1 (`command.murknet.htb` = PubSub dispatcher). New cross-room evidence join: `op_snatch` command-6 places Watson at Silvertown (51°30'17.6"N, 0°02'05.1"E), tying Bottle Out's chapter text and Paper Ghost's contractor delivery address to a dispatcher artifact. `status: closed` per `02_frontmatter-standard` §1 — engaged, documented, one flag unsolved, and not resumable (event closed, instance expired); contrast Last Light's `draft`, which is resumable per its §16. `created` stamped from a real fetched UTC clock (container clock, not the vault host's). `updated` omitted per `02_frontmatter-standard` §1 (plugin-owned, not hand-stamped). `difficulty`/`points` from the challenge page; `solves` omitted; `category: forensics` carried forward unverified as in sibling notes.
+- 2026-09-21 — Note created after Whisper Chain (Sherlock 03, medium, 975, **7/8**). §12 records all twenty flag-8 submissions and four reasoning failures verbatim, per the event's format-not-content taxonomy. Closes MOC open thread #1 (`command.murknet.htb` = PubSub dispatcher). New cross-room evidence join: `op_snatch` command-6 places Watson at Silvertown (51°30'17.6"N, 0°02'05.1"E), tying Bottle Out's chapter text and Paper Ghost's contractor delivery address to a dispatcher artifact. `created` stamped from a real fetched UTC clock (container clock, not the vault host's). `difficulty`/`points` from the challenge page; `solves` omitted; `category: forensics` carried forward unverified as in sibling notes.

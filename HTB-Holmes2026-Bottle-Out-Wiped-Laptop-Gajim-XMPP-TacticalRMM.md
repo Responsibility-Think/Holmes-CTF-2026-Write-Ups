@@ -29,7 +29,6 @@ tags:
   - Windows
   - Log_Analysis
 related:
-  - "[[HTB]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
 aliases:
   - Bottle Out
@@ -407,8 +406,6 @@ Fifteen minutes from profile creation to a fully provisioned operator workstatio
 ## Cross-references
 
 - [[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]] — Sherlock 01 of the same event; source of the answer-mask-as-constraint technique reused here for flag 7
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 

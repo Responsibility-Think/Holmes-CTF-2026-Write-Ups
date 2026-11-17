@@ -30,8 +30,7 @@ tags:
   - Incident_Response
   - forensics
   - Reverse_Engineering
-related:
-  - "[[HTB]]"
+related: []
 aliases:
   - Silent Dividend
   - Holmes 2026 Silent Dividend
@@ -342,10 +341,8 @@ cast call 0x69Bf5b7aBA51C3Ee8bF169aB47479ba95DBF709D \
 ---
 
 ## Cross-references
+- No cross-references outside this repository.
 
-- [[HTB-CA2026-Remnant-TLS-Decrypt-C2-DFIR]] — category sibling; the prior Sherlock-class DFIR note, and the source of the "decrypt every channel" discipline applied here
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 

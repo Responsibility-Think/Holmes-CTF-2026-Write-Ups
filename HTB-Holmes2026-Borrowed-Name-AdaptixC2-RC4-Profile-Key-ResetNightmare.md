@@ -38,7 +38,6 @@ tags:
   - Reverse_Engineering
   - Cryptography
 related:
-  - "[[HTB]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
   - "[[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]]"
   - "[[HTB-Holmes2026-Paper-Ghost-Planted-USB-Spyware-Search-Index-Recovery]]"
@@ -56,6 +55,8 @@ updated: 2026-09-20T10:05:00.000Z
 > **No `HTB{}` string exists for this room** — it is question-graded. Sherlock 08 of the event · insane · 1000 points.
 > The room is one pivot repeated at two scales: **the beacon binary carries the key that decrypts its own C2 traffic, stored immediately after the ciphertext it unlocks.** Recover 16 bytes at file offset `0x15904` and the entire intrusion reads as plaintext.
 
+> [!note] Credential values (passwords, access keys, credential hashes) are truncated for publication.
+
 > [!info] Scenario, verbatim
 > SCENARIO NAME
 > 8 - Borrowed Name
@@ -72,13 +73,13 @@ updated: 2026-09-20T10:05:00.000Z
 | # | Question | Answer | Method |
 |---|---|---|---|
 | 1 | C2 used for this attack | `adaptix` | agent watermark `be4c0149` + `13ConnectorHTTP` RTTI + stock BeaconHTTP defaults |
-| 2 | SessionKey:EncryptionKey | `53fc4c03c7b461befe5dcb268e3d9208:4580221ac3fe51be1797524a048e552d` | key at `0x15904`; SessionKey from the decrypted beat |
+| 2 | SessionKey:EncryptionKey | `53fc4c03…552d` | key at `0x15904`; SessionKey from the decrypted beat |
 | 3 | CVE used for privilege escalation | `CVE-2026-27912` | decrypted BOF output, `[*] Action: ResetNightmare` |
 | 4 | md5sum of the custom BOF | `583236cc3ef2488fb133385bcd75825e` | `resetnightmare` object, 70,169 B, lifted from the tasking stream |
 | 5 | ObjectSID of the writable Property | `S-1-5-21-2253468260-689643353-167204612-1125` | DACL BOF, ACE #4, `ObjectAceType 28630ebb-…` = `userPrincipalName` |
 | 6 | Named attack for the password, and when | `internal_monologue:2026-09-09 20:44:11` | NTLM evtx 4021 + HTTP `Date` on the tasking response |
-| 7 | Credentials used to perform the attack | `afenwick:*Seash5lls*` | `/upnpass:` argument to the `resetnightmare` BOF |
-| 8 | Targeted user and resulting password | `jreed:Aigohng8vai0seish4zi` | same BOF's decrypted output |
+| 7 | Credentials used to perform the attack | `afenwick:*S…s*` | `/upnpass:` argument to the `resetnightmare` BOF |
+| 8 | Targeted user and resulting password | `jreed:Ai…zi` | same BOF's decrypted output |
 | 9 | New token logon type after privesc | `9` | `make_token` BOF output, `DIOCORE\jreed (logon: 9)` |
 | 10 | Path the new agent was uploaded to | `\\192.168.56.11\ADMIN$\svc_bkup` | lateral-movement BOF argument, `dc02` → `192.168.56.11` |
 | 11 | Service group used to start the agent | `defragsvc` | original path `svchost.exe -k defragsvc` |
@@ -326,7 +327,7 @@ SecurityIdentifier      : S-1-5-21-2253468260-689643353-167204612-1125
 [*] Step 3: Clearing fake UPN from afenwick before changepw
 [+] UPN cleared
 [*] Step 4: Resetting jreed's password via kadmin/changepw
-[*] New password: Aigohng8vai0seish4zi
+[*] New password: Ai…zi
 [+] Password change success!
 [+] Verified: jreed accepts the new password
 ```
@@ -622,8 +623,6 @@ PY
 - [[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]] — Sherlock 02; origin of the answer-format-is-literal rule
 - [[HTB-Holmes2026-Paper-Ghost-Planted-USB-Spyware-Search-Index-Recovery]] — Sherlock 04; second instance of that rule, and the `DIOGENES` programme that this room's domain (`core.diogenes.htb`) belongs to
 - [[HTB-Holmes2026-Iron-Feather-PX4-Encrypted-Dataman-ULog-Custom-KDF]] — Sherlock 07; third instance, and the "reimplement when the transform is closed over readable constants" rule applied here to the profile container
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 

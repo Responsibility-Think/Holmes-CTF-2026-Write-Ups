@@ -27,7 +27,6 @@ tags:
   - Reverse_Engineering
   - Cryptography
 related:
-  - "[[HTB]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
   - "[[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]]"
   - "[[HTB-Holmes2026-Paper-Ghost-Planted-USB-Spyware-Search-Index-Recovery]]"
@@ -538,8 +537,6 @@ Mixed Enterprise and ICS, because the operational half of this room is a control
 - [[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]] — Sherlock 01; the answer-mask-as-constraint technique, and the same "key lives outside the protected artifact" structure
 - [[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]] — Sherlock 02; origin of the answer-format-is-literal rule that flag 5 re-proved
 - [[HTB-Holmes2026-Paper-Ghost-Planted-USB-Spyware-Search-Index-Recovery]] — Sherlock 04; second instance of the same rule, and the "enumerate what was not collected" discipline
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 

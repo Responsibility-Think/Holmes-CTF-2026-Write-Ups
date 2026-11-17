@@ -31,7 +31,6 @@ tags:
   - Malware_Analysis
   - Mobile_Forensics
 related:
-  - "[[HTB]]"
   - "[[00_MOC-HTB-Holmes2026-Reichenbach-Directive-Event]]"
   - "[[HTB-Holmes2026-Iron-Feather-PX4-Encrypted-Dataman-ULog-Custom-KDF]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
@@ -515,8 +514,6 @@ Four, all on correct-or-nearly-correct analysis.
 - [[HTB-Holmes2026-Poisoned-Branch-Backdoored-Git-Repo-XOR-Mettle-ZipCrypto]] — Sherlock 05; origin of the live-host expiry rule this room re-proves, and the other repeating-XOR reconstruction in the event
 - [[HTB-Holmes2026-Whisper-Chain-Live-XMPP-PubSub-Dispatcher-PerNode-AES]] — Sherlock 03; the event's other live pub/sub command channel
 - [[HTB-Holmes2026-Last-Light-Golden-Tickets-RBCD-Unflushed-EVTX-Carve]] — Sherlock 09; the event's other partial
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 
@@ -534,4 +531,4 @@ Distinct from the existing seven classes. Classes 1–5 concern **evidence** —
 
 ## Change Log
 
-- 2026-09-21 — Note created. Ten of twenty flags recorded; scenario and story-chapter context captured verbatim. All four wrong submissions logged in §13 with the reasoning at the time. §12.1 records the leading candidate for flag 6 and the reasoning that supersedes the submitted answer. §15 proposes a sixth failure class for the event MOC. `status: draft` — the note is a first pass; per `00_ctf-writeup-standard` §1.1 the terminal value once the note is finished and the room will not be resumed is `closed`, and the filename already carries the `-PARTIAL` suffix that accompanies it. `created` stamped from a real fetched UTC clock. `updated` omitted per `02_frontmatter-standard` §1 (plugin-owned, not hand-stamped). `solves` and `category` unverified (§12.9). **Mitre table mixes Mobile IDs of uncertain currency — flagged in §8, not resolved.**
+- 2026-09-21 — Note created. Ten of twenty flags recorded; scenario and story-chapter context captured verbatim. All four wrong submissions logged in §13 with the reasoning at the time. §12.1 records the leading candidate for flag 6 and the reasoning that supersedes the submitted answer. §15 proposes a sixth failure class for the event MOC. `created` stamped from a real fetched UTC clock. `solves` and `category` unverified (§12.9). **Mitre table mixes Mobile IDs of uncertain currency — flagged in §8, not resolved.**

@@ -31,7 +31,6 @@ tags:
   - Windows
   - Log_Analysis
 related:
-  - "[[HTB]]"
   - "[[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
 aliases:
@@ -46,6 +45,8 @@ updated: 2026-09-20T08:55:17.237Z
 > [!success] Solved — 2026-09-20 04:47 (platform clock) · 9 of 9 flags
 > **No `HTB{}` string exists for this room** — it is question-graded. Sherlock 04 of the event · easy · 975 points.
 > The room is built on one artifact class: **`Windows.edb`'s `System_Search_AutoSummary` field, which retains up to 1,024 characters of indexed document text after the document itself is gone.**
+
+> [!note] Credential values (passwords, access keys, credential hashes) are truncated for publication.
 
 > [!info] Scenario, verbatim
 > SCENARIO NAME
@@ -70,7 +71,7 @@ updated: 2026-09-20T08:55:17.237Z
 | 6 | At what time did microphone capture begin? | `2026-08-19 15:38:08` | NTUSER `ConsentStore\microphone\NonPackaged` → `LastUsedTimeStart` |
 | 7 | For how many seconds did the webcam stream? | `127` | same key under `webcam`, Stop − Start |
 | 8 | Decimal megabytes of outbound traffic to the C2 | `172.064531` | SRUM `{973F5D5C-…}` `BytesSent` ÷ 1,000,000 |
-| 9 | Credentials for a developer working on DIOGENES tickets | `tainsworth:D10g3n3s_T1ck3ts#2026` | `Windows.edb` AutoSummary for `EXT-0419.pdf` |
+| 9 | Credentials for a developer working on DIOGENES tickets | `tainsworth:D1…26` | `Windows.edb` AutoSummary for `EXT-0419.pdf` |
 
 All timestamps are **UTC as stored in the registry**. The host is Pacific (`ActiveTimeBias 420`), so local is UTC−7; the grader wanted UTC.
 
@@ -246,7 +247,7 @@ Name:                Tom Ainsworth
 Contractor ID:       EXT-0419
 Internal server:     srv-diogenes-tickets-01.internal
 Username:            tainsworth
-Password:            D10g3n3s_T1ck3ts#2026
+Password:            D1…26
 Access scope:        EXT-3 (ticketing host only)
 Assigned repository: parse_diogenese_tickets
 Supervisor path:     OBERSTEIN service path
@@ -370,7 +371,7 @@ PY
 | Audio Capture | T1123 | ConsentStore microphone 15:38:08 → 15:41:03 |
 | Video Capture | T1125 | ConsentStore webcam 15:42:28 → 15:44:35 |
 | Data from Local System | T1005 | DIOGENES contractor roster, asset inventory and personnel files on the Desktop |
-| Unsecured Credentials: Credentials In Files | T1552.001 | `tainsworth:D10g3n3s_T1ck3ts#2026` plaintext in `EXT-0419.pdf` |
+| Unsecured Credentials: Credentials In Files | T1552.001 | `tainsworth:D1…26` plaintext in `EXT-0419.pdf` |
 | Exfiltration Over C2 Channel | T1041 | 172,064,531 bytes sent by `update.exe`, SRUM |
 | Trusted Relationship | T1199 | contractor onboarding and badge access used to reach Floor 4 |
 
@@ -434,8 +435,6 @@ PY
 
 - [[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]] — Sherlock 02 of the same event; source of the answer-format-is-literal rule that flag 2 re-proved here, and the Silvertown location that `IT_SUPPORT.pdf`'s delivery address matches
 - [[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]] — Sherlock 01 of the same event; answer-mask-as-constraint technique
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 

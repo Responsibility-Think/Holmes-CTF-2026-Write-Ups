@@ -34,11 +34,12 @@ Nine Sherlocks, all DFIR. **Result: 225th of 5,637 teams · 7,800 points · 97 o
 
 ## Notes
 
+- **Credentials are truncated.** Passwords, access keys and credential hashes that appear in the evidence are shown truncated (for example `AKIA…RUOL`, `D1…26`), so no complete secret is published. File hashes and other IOCs are shown in full.
 - **Points** are the final scoreboard values, earned / available. HTB scores dynamically, so a few notes record a different value at solve time (Silent Dividend shows 975 → 800; Paper Ghost records 975 against a final 950).
 - **Partial** here means the room was flagged, but not completely — some questions were answered and accepted, others were not. This differs from the Cyber Apocalypse 2026 repo, where Partial meant worked but never flagged. Each partial write-up records the unsolved questions, every rejected submission, and where the reasoning stalled.
 - Every room is question-graded; no `HTB{}` string exists in any of them. Answers are published because the event has closed.
 - **Difficulty** for Bottle Out was not captured from the platform and is shown as `—`.
-- The notes are published as written in an Obsidian vault. `[[wikilinks]]` and callouts render as plain text on GitHub, and links to notes outside this set (`HTB`, `00_ctf-writeup-standard`, the technique notes) point into the vault, not into this repo.
+- The notes are published as written in an Obsidian vault. `[[wikilinks]]` and callouts render as plain text on GitHub; every remaining link points to another note in this repo.
 - MITRE ATT&CK mappings appear in every note's frontmatter. Several are explicitly flagged as weak or unverified in the note; treat them as working hypotheses rather than citations.
 
 ## Use

@@ -39,7 +39,6 @@ tags:
   - Cryptography
   - Supply_Chain
 related:
-  - "[[HTB]]"
   - "[[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]]"
   - "[[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]]"
   - "[[HTB-Holmes2026-Paper-Ghost-Planted-USB-Spyware-Search-Index-Recovery]]"
@@ -58,6 +57,8 @@ updated: 2026-09-20T11:28:41.235Z
 > **No `HTB{}` string exists for this room** — it is question-graded. Sherlock 05 of the event · medium · 1000 points.
 > First room in the event with a clean submission record. Thirteen wrong submissions across the previous five rooms; none here.
 > The room is two halves joined by one string. Ten flags come from a dead Linux triage collection; five come from a **live attacker web server** whose hostname is only recoverable from a hex-encoded `auditd` argument.
+
+> [!note] Credential values (passwords, access keys, credential hashes) are truncated for publication.
 
 > [!info] Scenario, verbatim
 > SCENARIO NAME
@@ -646,7 +647,7 @@ Every other address follows `<number> <street>, London <postcode>`. Hers is the 
 
 | Room | Artifact | String |
 |---|---|---|
-| Paper Ghost (04) | exfiltrated target list from Clara Voss's workstation | `tainsworth:D10g3n3s_T1ck3ts#2026` for `srv-diogenes-tickets-01.internal` |
+| Paper Ghost (04) | exfiltrated target list from Clara Voss's workstation | `tainsworth:D1…26` for `srv-diogenes-tickets-01.internal` |
 | Poisoned Branch (05) | `cvoss_exfil` inside `LOOT.zip` | `tainsworth:d10g3n3s_T1ck3ts#2026:forever` |
 
 The filename names the source (Clara Voss), the credential names the target (Tom Ainsworth), and the room's own scenario text says the investigation moved from Voss to Ainsworth. **This is the collection phase's product being consumed by the intrusion phase, recorded in both rooms' artifacts.** It is stronger than the Silvertown link and stronger than the DIOGENES programme-name link, both of which the MOC currently lists as the only evidence-level joins.
@@ -819,13 +820,11 @@ Running event total stays at **thirteen wrong submissions**, eleven of which wer
 - [[HTB-Holmes2026-Silent-Dividend-Electron-Preload-Dropper-Onchain-Key-Oracle]] — Sherlock 01; same "the thing that unlocks it ships alongside" structure
 - [[HTB-Holmes2026-Bottle-Out-Wiped-Laptop-Gajim-XMPP-TacticalRMM]] — Sherlock 02; origin of the answer-format-is-literal rule that flag 2 re-proved
 - [[HTB-Holmes2026-Iron-Feather-PX4-Encrypted-Dataman-ULog-Custom-KDF]] — Sherlock 07; same reimplement-the-transform approach applied here to the XOR carrier
-- [[00_ctf-writeup-standard]] — structure this note conforms to
-- [[HTB]]
 
 ---
 
 ## Change Log
 
-- 2026-09-20 — Note created. All fifteen flags solved and recorded; scenario captured verbatim. **Zero wrong submissions — first clean room in the event**, recorded in §15 with the reason. `difficulty` and `points` read off the challenge page; `category` and `solves` marked unverified (§17.1–2). Ten open items in §17, of which items 5 and 6 are timestamp inconsistencies that may be authoring artifacts rather than findings, and item 4 is a live discrepancy against the Paper Ghost note requiring a re-read before either is cited. MITRE table flagged in §11 as a mapping proposal with three named weaknesses (T1195.001 scope, T1070.003 host, no technique for the XOR carrier). `type: writeup` and `status: complete` need checking against `Governance/02_frontmatter-standard.md` before filing.
+- 2026-09-20 — Note created. All fifteen flags solved and recorded; scenario captured verbatim. **Zero wrong submissions — first clean room in the event**, recorded in §15 with the reason. `difficulty` and `points` read off the challenge page; `category` and `solves` marked unverified (§17.1–2). Ten open items in §17, of which items 5 and 6 are timestamp inconsistencies that may be authoring artifacts rather than findings, and item 4 is a live discrepancy against the Paper Ghost note requiring a re-read before either is cited. MITRE table flagged in §11 as a mapping proposal with three named weaknesses (T1195.001 scope, T1070.003 host, no technique for the XOR carrier).
 - 2026-09-20 — Post-solve update after the `LOOT.zip` password recovery was attempted and **failed**. §17.3 rewritten from "not run" to a finding: password ≥13 characters, not vocabulary-derived, the one place the operator's credential hygiene holds. §12 gains a paragraph on password strength being irrelevant against a known-plaintext break, with the `zip(1)` ZipCrypto-default point for policy language. §13 gains the key-schedule-as-oracle technique and the validate-before-trusting-a-negative caveat. §14 gains the recovery attempt as an eliminated path. §10 gains the derivation to the concept list. §6.2 cross-referenced to §17.3. **No flag answers changed.**
 - 2026-09-20 — §17.8 updated: the `Tools/` hash comparison was attempted at 07:40 and the instance had already been released (`Destination Host Unreachable` from the VPN gateway, tunnel healthy), so the item is now closable only by respawn. Reworded from "never downloaded" to record the attempt and why the missing hash does not weaken the build-chain conclusion. **No flag answers changed.**
